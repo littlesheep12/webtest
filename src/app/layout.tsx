@@ -6,29 +6,13 @@ import BackToTop from "@/components/back-to-top";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 export const metadata: Metadata = {
-  title: "Eric Huang | Personal",
+  title: "PowerAI",
   authors: [
-    { name: "Eric Huang", url: "https://github.com/erich2s" },
-    { name: "黄士崧", url: "https://github.com/erich2s" },
+    { name: "PowerAI", url: "#" },
   ],
-  description: "Eric Huang's personal portfolio website, 黄士崧的个人网站",
-  openGraph: {
-    title: "Eric Huang | Personal",
-    description: "Eric Huang's personal portfolio website, 黄士崧的个人网站",
-    url: "https://www.erichuang.art",
-    images: [
-      {
-        url: "/photo.jpeg",
-        alt: "Eric Huang | Personal",
-        width: 640,
-        height: 800,
-      },
-    ],
-  },
-  alternates: {
-    canonical: "https://www.erichuang.art",
-  },
+  description: "powerai-website",
 };
+
 
 export default function RootLayout({
   children,
@@ -37,9 +21,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={montserrat.className}>
+      <body className={montserrat.className} style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
         <Header />
-        <main className="container lg:px-28">{children}</main>
+        <main className="container lg:px-28 flex-grow flex flex-col justify-center items-center">{children}</main>
         <BackToTop />
       </body>
     </html>

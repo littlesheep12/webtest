@@ -3,8 +3,7 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import {
   faInstagram,
   faGithub,
-  faTiktok,
-  faXTwitter,
+  faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
 import MotionList from "./motion-list";
 import { Button } from "@/components/ui/button";
@@ -15,45 +14,36 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
+
 type Contact = {
   name: string;
   className: string;
   href: string;
   icon: any;
 };
+
 const contacts: Contact[] = [
   {
     name: "Email",
     className: "bg-yellow-500 hover:bg-yellow-600",
-    href: "mailto:erich2s0103@gmail.com",
+    href: "mailto:#",
     icon: faEnvelope,
   },
 
   {
-    name: "X",
-    className: "bg-black hover:bg-gray-800/90",
-    href: "https://twitter.com/erich2s",
-    icon: faXTwitter,
+    name: "LinkedIn",
+    className: "bg-blue-800 hover:bg-blue-800/90",
+    href: "https://www.linkedin.com/company/poweraisoftware/",
+    icon: faLinkedinIn,
   },
   {
     name: "Github",
     className: "bg-black hover:bg-gray-800/90",
-    href: "https://github.com/erich2s",
+    href: "https://github.com/PowerAI-LLC",
     icon: faGithub,
   },
-  {
-    name: "Instagram",
-    className: "bg-pink-500 hover:bg-pink-600",
-    href: "https://instagram.com/eric.h2s/",
-    icon: faInstagram,
-  },
-  {
-    name: "TikTok",
-    className: "bg-black hover:bg-gray-800/90",
-    href: "https://tiktok.com/@eric_h2s",
-    icon: faTiktok,
-  },
 ];
+
 export default function ContactList({
   delayOffset = 0,
   showWhenInView = true,
